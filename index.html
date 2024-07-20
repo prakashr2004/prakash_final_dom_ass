@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>DCKAP PALLI INVENTORY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <h1>DCKAP PALLI INVENTORY</h1>
+        </header>
+        <main class="main-container">
+            <div class="main-title">
+                <p class="font-weight-bold">DASHBOARD</p>
+            </div>
+
+            <div class="main-cards">
+                <div class="card">
+                    <div class="card-inner">
+                        <p class="text-primary productes" id="BOOK">BOOK</p>
+                        <span class="material-icons-outlined text-blue">inventory_2</span>
+                    </div>
+                    <span class="text-primary font-weight-bold productes-price">249</span>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <p class="text-primary productes" id="TOYES">TOYES</p>
+                        <span class="material-icons-outlined text-orange">add_shopping_cart</span>
+                    </div>
+                    <span class="text-primary font-weight-bold productes-price">83</span>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <p class="text-primary productes" id="BAG">BAG</p>
+                        <span class="material-icons-outlined text-green">shopping_cart</span>
+                    </div>
+                    <span class="text-primary font-weight-bold productes-price">79</span>
+                </div>
+            </div>
+
+            <div id="button-container">
+                <button id="add-product">Add Product</button>
+                <button id="update-inventory">Update Inventory</button>
+            </div>
+
+            <div class="charts">
+                <div class="charts-card">
+                    <p class="chart-title">Top 5 Products</p>
+                    <div id="bar-chart"></div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <div id="overlay"></div>
+
+    <!-- Add Product Alert Container -->
+    <div id="add-product-alert" class="alert-container">
+        <h2>Add New Product</h2>
+        <input type="text" id="product-name" placeholder="Product Name">
+        <input type="number" id="product-quantity" placeholder="Quantity">
+        <button class="add-button" id="confirm-add">Add</button>
+        <button class="cancel-button" id="cancel-add">Cancel</button>
+    </div>
+
+    <!-- Update Inventory Alert Container -->
+    <div id="update-inventory-alert" class="alert-container">
+        <h2>Update Inventory</h2>
+        <input type="text" id="update-product-name" placeholder="Product Name">
+        <input type="number" id="update-product-quantity" placeholder="Quantity">
+        <input type="text" id="update-recipient" placeholder="Recipient">
+        <button class="add-button" id="confirm-update">Update</button>
+        <button class="cancel-button" id="cancel-update">Cancel</button>
+    </div>
+
+
+    <!-- Updated Inventory Table -->
+    <div class="table-container">
+      <table>
+          <thead>
+              <tr>
+                  <th>Product Name</th>
+                  <th>Recipient</th>
+                  <th>Quantity</th>
+              </tr>
+          </thead>
+          <tbody id="inventory-table-body">
+              <!-- Rows will be added here dynamically -->
+          </tbody>
+      </table>
+  </div>
+  
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
